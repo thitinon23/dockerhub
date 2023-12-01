@@ -8,16 +8,6 @@ pipeline {
             }
         }
 
-        stage('Tag to Puch') {
-            steps{  
-                script {
-                    sh "whoami"    
-                    sh 'docker login --username thitinon23 --password dckr_pat_bE8dj0znYXToDsHEGTUxhHXIpOQ'
-                    sh 'docker tag thitinon23/assignment-mtl thitinon23/assignment-mtl:latest'
-                    sh 'docker push thitinon23/assignment-mtl:latest' 
-                }
-            }
-        }
         
     stage('Deploy') {
             steps {
