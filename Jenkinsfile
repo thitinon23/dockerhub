@@ -15,7 +15,7 @@ pipeline {
                     sh "pwd"
                     dir('/var/lib/jenkins/services') {
                         sh "pwd"
-                        sh "docker build - < Dockerfile"
+                        sh "docker build -< Dockerfile"
                     }
                 }
              }
