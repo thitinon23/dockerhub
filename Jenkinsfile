@@ -15,7 +15,7 @@ pipeline {
                     sh "pwd"
                     dir('ci-cd-pipeline') {
                         sh "pwd"
-                        sh "docker build -t Dockerfile"
+                        sh "docker build - < Dockerfile"
                     }
                 }
              }
