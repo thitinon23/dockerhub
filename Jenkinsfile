@@ -13,7 +13,7 @@ pipeline {
                 script {
                     sh "whoami"
                     sh "pwd"
-                    dir('ci-cd-pipeline') {
+                    dir('/var/lib/jenkins/services') {
                         sh "pwd"
                         sh "docker build - < Dockerfile"
                     }
