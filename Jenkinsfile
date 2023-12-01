@@ -13,7 +13,8 @@ pipeline {
                 echo 'Hello Deploy'
                 sh "whoami"
                 sh "pwd"
-                sh "kubectl apply -f /var/lib/jenkins/services/demo-go.yaml"
+                sh "ls -lrt"
+                sh "kubectl apply -f ./demo-go.yaml"
             }
         }
         
