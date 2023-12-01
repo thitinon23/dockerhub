@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: demo-go
+  name: demo-go
+  namespace: demo-go-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-go
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: demo-go
+    spec:
+      containers:
+      - image: thitinon23/assignment-mtl:baseimage1.0
+        name: go-mtl
+        resources: {}
+status: {}
