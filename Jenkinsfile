@@ -8,19 +8,6 @@ pipeline {
             }
         }
 
-        stage('Build image') {
-            steps{
-                script {
-                    sh "whoami"
-                    sh "pwd"
-                    dir('/var/lib/jenkins/services/app-no-ops/fiber-go-template') {
-                        sh "pwd"
-                        sh "docker build ."
-                    }
-                }
-             }
-        }
-
         stage('Tag to Puch') {
             steps{  
                 script {
