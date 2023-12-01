@@ -13,7 +13,7 @@ pipeline {
                 script {
                     sh "whoami"
                     sh "pwd"
-                    dir('/var/lib/jenkins/services') {
+                    dir('/var/lib/jenkins/services/app-no-ops/fiber-go-template') {
                         sh "pwd"
                         sh "docker build ."
                     }
